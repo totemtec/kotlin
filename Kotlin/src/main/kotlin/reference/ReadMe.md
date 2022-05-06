@@ -1,3 +1,3 @@
-# 官方文档
+# 官方文档翻译
 
-https://book.kotlincn.net/text/d-kotlinx-coroutines.html
+https://www.kotlincn.net/docs/reference/coroutines/coroutines-guide.html

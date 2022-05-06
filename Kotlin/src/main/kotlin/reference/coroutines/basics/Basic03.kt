@@ -5,12 +5,12 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-fun main() = runBlocking<Unit> {
-    GlobalScope.launch {
+fun main() = runBlocking<Unit> { // 开始执行主协程
+    GlobalScope.launch {  // 在后台启动一个新的协程并继续
         delay(1000)
         println("World!")
     }
 
-    println("Hello,")
-    delay(2000)
+    println("Hello,")  // 主协程在这里会立即执行
+    delay(2000)  // 延迟 2 秒来保证 JVM 存活
 }
