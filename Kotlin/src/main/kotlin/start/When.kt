@@ -18,10 +18,22 @@ fun whenUseObject(c1: Color, c2: Color) {
     }
 }
 
+fun whenCheckInstance(obj: Any) {
+    when (obj) {
+        is String -> println("obj is String")
+        is Int -> println("obj is Int")
+        else   -> println("obj is Unknown")
+    }
+}
+
 fun main() {
     whenUseEnum(Color.RED)
     whenUseEnum(Color.GREEN)
 
     whenUseObject(Color.GREEN, Color.BLUE)
     whenUseObject(Color.GREEN, Color.GREEN)
+
+    whenCheckInstance("哈哈")
+    whenCheckInstance( 4 )
+    whenCheckInstance(listOf(1, 2))
 }
