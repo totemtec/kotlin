@@ -15,10 +15,12 @@ private fun simple(): Flow<Int> = flow {
 }
 
 fun main() = runBlocking<Unit> {
+
+    // 此协程和 flow 协程互不影响
     launch {
         for (k in 1..3) {
             println("I'm not blocked $k")
-            delay(1000)
+            delay(1600)
         }
     }
 
